@@ -5,4 +5,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   before_validation { email.downcase! }
   validates :email,format: { with: /\A[\w+\-.]+@[a-z\d\-.]+.[a-z]+\z/i }
+
+  has_many :blogs
+  has_many :contacts
 end

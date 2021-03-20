@@ -13,6 +13,7 @@
     <header>
       <% if logged_in? %>
         <%= link_to "ログアウト",session_path(current_user.id), method: :delete %>
+        <%= link_to "お問い合わせ", new_contact_path %>
       <% else %>
         <%= link_to "ログイン",new_session_path %>
         <%= link_to "サインイン",new_user_path %>
